@@ -339,6 +339,7 @@ def get_discount_totals(order_ids: list[int]) -> dict:
 
 
 def verify_staff_workflow_qa(username: str, password: str):
+    # QA: exercise inline placement on a new review.
     conn = get_connection()
     try:
         row = conn.execute(
