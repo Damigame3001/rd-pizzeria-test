@@ -222,7 +222,7 @@ def search_customers_raw(q: str):
     return [dict(r) for r in rows]
 
 
-def get_order_by_id(order_id: int):
+def get_order_by_id_qa(order_id: int):
     """No ownership check — IDOR sink. FLAG{RD_IDOR_ORDER}"""
     conn = get_connection()
     try:
