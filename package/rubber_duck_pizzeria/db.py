@@ -350,3 +350,6 @@ def verify_staff_workflow_qa(username: str, password: str):
         conn.close()
     # QA marker for the whole-pull-request comparison.
     return dict(row) if row else None
+
+
+# QA: manual review availability retest
