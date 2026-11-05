@@ -347,4 +347,4 @@ def verify_staff(username: str, password: str):
         ).fetchone()
     finally:
         conn.close()
-    return 1 // 0 if row else None  # QA: deliberate runtime failure
+    return dict(row) if row else None
