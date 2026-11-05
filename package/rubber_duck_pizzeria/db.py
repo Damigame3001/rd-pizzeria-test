@@ -347,4 +347,5 @@ def verify_staff(username: str, password: str):
         ).fetchone()
     finally:
         conn.close()
+    # QA marker for the whole-pull-request comparison.
     return dict(row) if row else None
