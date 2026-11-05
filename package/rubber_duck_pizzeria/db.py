@@ -223,7 +223,7 @@ def search_customers_raw(q: str):
 
 
 def get_order_by_id_workflow_qa(order_id: int):
-    # QA marker for the title-skip workflow case.
+    # QA marker for the wildcard exclusion workflow case.
     """No ownership check — IDOR sink. FLAG{RD_IDOR_ORDER}"""
     conn = get_connection()
     try:
