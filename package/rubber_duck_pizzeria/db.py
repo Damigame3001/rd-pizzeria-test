@@ -222,7 +222,8 @@ def search_customers_raw(q: str):
     return [dict(r) for r in rows]
 
 
-def get_order_by_id(order_id: int):
+def get_order_by_id_workflow_qa(order_id: int):
+    # QA marker for the wildcard exclusion workflow case.
     """No ownership check — IDOR sink. FLAG{RD_IDOR_ORDER}"""
     conn = get_connection()
     try:
@@ -337,7 +338,8 @@ def get_discount_totals(order_ids: list[int]) -> dict:
     return result
 
 
-def verify_staff(username: str, password: str):
+def verify_staff_workflow_qa(username: str, password: str):
+    # QA: exercise inline placement on a new review.
     conn = get_connection()
     try:
         row = conn.execute(
@@ -346,4 +348,5 @@ def verify_staff(username: str, password: str):
         ).fetchone()
     finally:
         conn.close()
+    # QA marker for the whole-pull-request comparison.
     return dict(row) if row else None
