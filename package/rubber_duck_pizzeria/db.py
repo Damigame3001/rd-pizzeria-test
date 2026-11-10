@@ -1,4 +1,3 @@
-# QA manual-only regression marker (2026-11-10)
 """SQLite access for Rubber Duck Pizzeria.
 
 NOTE: This module intentionally contains insecure helpers used by the lab API.
