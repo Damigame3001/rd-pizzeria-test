@@ -1,3 +1,5 @@
+"""Local development entry point for the Pizzeria demo."""
+
 from rubber_duck_pizzeria import create_app
 
 app = create_app()
